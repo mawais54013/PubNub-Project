@@ -34,9 +34,9 @@ var generatePerson = function(online) {
     person.first = names[Math.floor(Math.random() * names.length)];
     person.last = names[Math.floor(Math.random() * names.length)];
 
-    if (!online) {
-        person.last = '(Simulated)';
-    }
+    // if (!online) {
+    //     person.last = '(Simulated)';
+    // }
 
     person.full = [person.first, person.last].join(" ");
     person.uuid = new Date().getTime();
@@ -79,25 +79,25 @@ var app = {
 
         this.ChatEngine.on('$.ready', function(data) {
             app.ready(data);
-            app.simulateOfflineUsers();
+            // app.simulateOfflineUsers();
             app.bindMessages();
             app.bindUsers();
         });
 
     },
-    simulateOfflineUsers: function() {
+    // simulateOfflineUsers: function() {
 
-        for (var j = 3; j > 0; j--) {
-            var tempPerson = generatePerson(false);
+    //     for (var j = 3; j > 0; j--) {
+    //         var tempPerson = generatePerson(false);
 
-            var ceTemp = new this.ChatEngine.User(tempPerson.uuid, tempPerson);
+    //         var ceTemp = new this.ChatEngine.User(tempPerson.uuid, tempPerson);
 
-            this.users.push(ceTemp)
-        }
+    //         this.users.push(ceTemp)
+    //     }
 
-        this.renderUsers();
+    //     this.renderUsers();
 
-    },
+    // },
     ready: function(data) {
         this.me = data.me;
         this.chat = new this.ChatEngine.Chat('chatengine-meta');

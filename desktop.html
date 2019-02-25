@@ -360,6 +360,12 @@
         background-color: black;
     }
 
+    #scrollList
+    {
+        height:420px;
+        overflow-y: scroll;
+    }
+
     @media (max-width:800px) {
         .people-list {
             display: none;
@@ -390,7 +396,7 @@
                                 <input type="text" placeholder="search" />
                                 <i class="fa fa-search"></i>
                             </div>
-                            <ul class="list">
+                            <ul class="list" id="scrollList">
                             </ul>
                         </div>
             </div>
