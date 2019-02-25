@@ -12,6 +12,9 @@ jQuery.fn.sortDomElements = (function() {
     };
 })();
 
+var cookieValue = document.getElementById('check').getAttribute('value');
+// console.log(cookieValue)
+
 var generatePerson = function(online) {
 
     var person = {};
@@ -100,8 +103,9 @@ var app = {
     // },
     ready: function(data) {
         this.me = data.me;
-        this.chat = new this.ChatEngine.Chat('chatengine-meta');
-
+        this.chat = new this.ChatEngine.Chat(cookieValue);
+        // console.log(cookieValue)
+        // console.log(fromSelect);
         //// UNCOMMENT code below to enbale the 'markdown-plugin'
         //// also the `.plugin(markdown);` line chained to `this.chat.search`
         // const markdown = ChatEngineCore.plugin['chat-engine-markdown']();
@@ -276,3 +280,5 @@ var app = {
 };
 
 app.init();
+
+
