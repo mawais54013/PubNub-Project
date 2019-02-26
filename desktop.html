@@ -379,10 +379,14 @@
 
 <body>
     <div class="jumbotron jumbotron-fluid">
-        <div class="container" id="check" value="war">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            
+        <div class="container" id="check" value='Swifty'>
+            <!-- <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="online"></div>
+                <div class="tab-pane" id="offline"></div>
+                <div class="tab-pane" id="search"></div>
+              </div>
         </div>
     </div>
 
@@ -469,7 +473,11 @@
     <script src="./node_modules/chat-engine/dist/chat-engine.js" type="text/javascript"></script>
     <script src="./node_modules/chat-engine-typing-indicator/dist/chat-engine-typing-indicator.js" type="text/javascript"></script>
     <script src="./node_modules/chat-engine-markdown/dist/chat-engine-markdown.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="desktop.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
 </body>
 
 </html>
