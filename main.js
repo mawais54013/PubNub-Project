@@ -1,9 +1,23 @@
 var cookieValue = document.getElementById('check').getAttribute('value');
 
 // Loop through streams array and make an AJAX request for each item
+let checker = [];
+checker.push(cookieValue);
+
 const streams = [];
-streams.push(cookieValue);
+
+if(checker.length > 0)
+{
+  streams.push(checker[checker.length-1]);
+}
+else 
+{
+  streams.push(cookieValue);
+}
+// streams.push(cookieValue);
+
 streams.forEach((item) => {
+  console.log(streams)
   $.getJSON(`https://api.twitch.tv/kraken/streams/${item}?client_id=xe5g4cpvq2c7p5kug17vy8wlc0yr1a`, (json) => {
     // Append online streamers to online div
     if (json.stream) {
