@@ -12,6 +12,7 @@ if(checker.length > 0)
 }
 else 
 {
+  streams = [];
   streams.push(cookieValue);
 }
 // streams.push(cookieValue);
