@@ -1,4 +1,32 @@
-var cookieValue = document.getElementById('check').getAttribute('value');
+const channels = ['freecodecamp', 'Warcraft', 'Asmongold', 'Towelliee', 'Swifty', 'Slootbag', 'Teggu', 'Naguura', 'Sco', 'Rogerbrown', 'devolore', 'TrumpSC', 'nl_Kripp', 'HSdogdog', 'DisguisedToastHS', 'PWNSTARZdotCOM', 'brunofin', 'comster404'];
+channels.forEach((data) => {
+  $.getJSON(`https://api.twitch.tv/kraken/streams/${data}?client_id=xe5g4cpvq2c7p5kug17vy8wlc0yr1a`, (json) => {
+    if(json.stream) {
+      $('#avaButtons').append(`
+        <div class="col-12">
+          <p class="lead">
+            <button onClick="pickedChannel('${json.stream.channel.display_name}')"><a href="desktop.html" class="btn btn-lg btn-secondary" id="channelPicked" value="${json.stream.channel.name}">${json.stream.game}</a></button>
+          </p>
+        </div>
+      `)
+    }
+  });
+});
+let picked;
+function pickedChannel(data)
+{
+  // console.log(data)
+  localStorage.clear();
+  localStorage.setItem('pickedGame', data);
+}
+
+var retrievedObject = localStorage.getItem('pickedGame');
+localStorage.clear();
+
+// console.log(retrievedObject);
+
+// var cookieValue = document.getElementById('check').getAttribute('value');
+var cookieValue = retrievedObject;
 
 // Loop through streams array and make an AJAX request for each item
 let checker = [];
@@ -34,6 +62,13 @@ streams.forEach((item) => {
         </div>
       `);
       
+      $("#holder").append(`
+        <div class="col-12">
+          <h3>Channel Name: ${json.stream.channel.display_name}</h3>
+          <p>Streaming ${json.stream.game}</p>
+          <p>Total viewers: ${json.stream.viewers}</p>
+        </div>
+      `);
     // Append offline streamers to offline div
     } else {
       $.getJSON(`https://api.twitch.tv/kraken/streams/${item}?client_id=xe5g4cpvq2c7p5kug17vy8wlc0yr1a`, (json) => {
