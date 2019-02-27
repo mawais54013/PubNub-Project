@@ -25,14 +25,9 @@ streams.forEach((item) => {
       $('#online').append(`
         <div class="col-12">
           <div class="row">
-            <div class="col-4 col-sm-2">
-              <img src="${json.stream.channel.logo}">
-            </div>
-            <div class="col-8 col-sm-10">
-              <h3><a href="${json.stream.channel.url}" target="_blank">${json.stream.channel.display_name}</a></h3>
-              <p>${json.stream.channel.status}</p>
-              <p>Streaming ${json.stream.game} for ${json.stream.viewers} viewers</p>
-              <button class="btn" value="${json.stream.channel.name}" href="#${json.stream.channel.name}">Live</button>
+            <div class="col-8 col-sm-10" id="hidden-div">
+              
+              <button class="btn" value="${json.stream.channel.name}" href="#${json.stream.channel.name}" onclick="getElementById('hidden-div').style.display = 'block'; this.style.display = 'none'">Click To Start</button>
             </div>
           </div>
           <div class="collapse" id="${json.stream.channel.name}" style="background: #000"></div>
@@ -144,14 +139,15 @@ $('#online').on('click', 'button', (event) => {
   const name = $(event.target).val();
   
   // Live button
-  if ($(event.target).text() === 'Live') {
+  if ($(event.target).text() === 'Click To Start') {
     // Close previously opened panel
     if ($('.btn:contains("Hide")').length === 1) {
-      $('.btn:contains("Hide")').text('Live');
+      $('.btn:contains("Hide")').text('Click To Start');
       $('.collapse:has("iframe")').collapse('hide').empty();
     }
     // Change button name to "Hide"
-    $(event.target).text('Hide');
+    // $(event.target).text('Hide');
+
     // Append iframe into collapse div
     $(id).append(`
       <iframe
@@ -180,12 +176,12 @@ $('#online').on('click', 'button', (event) => {
   }
   
   // Hide button
-  if ($(event.target).text() === 'Hide') {
-    if ($(id).hasClass('collapsing') === false) {
-      $(id).collapse('hide').empty();
-      $(event.target).text('Live');
-    }
-  }
+  // if ($(event.target).text() === 'Hide') {
+  //   if ($(id).hasClass('collapsing') === false) {
+  //     $(id).collapse('hide').empty();
+  //     $(event.target).text('Click To Start');
+  //   }
+  // }
 });
 
 // Form submit handler
@@ -234,7 +230,7 @@ $('form').on('submit', (event) => {
                   <h3><a href="${item.channel.url}" target="_blank">${item.channel.display_name}</a></h3>
                   <p>${item.channel.status}</p>
                   <p>Streaming ${item.game} for ${item.viewers} viewers</p>
-                  <button class="btn" value="${item.channel.name}" href="#${item.channel.name}">Live</button>
+                  <button class="btn" value="${item.channel.name}" href="#${item.channel.name}">Click To Start</button>
                 </div>
               </div>
               <div class="collapse" id="${item.channel.name}" style="background: #000"></div>
@@ -255,10 +251,10 @@ $('#search').on('click', 'button', (event) => {
   const name = $(event.target).val();
   
   // Live button
-  if ($(event.target).text() === 'Live') {
+  if ($(event.target).text() === 'Click To Start') {
     // Close previously opened panel
     if ($('.btn:contains("Hide")').length === 1) {
-      $('.btn:contains("Hide")').text('Live');
+      $('.btn:contains("Hide")').text('Click To Start');
       $('.collapse:has("iframe")').collapse('hide').empty();
     }
     // Change button name to "Hide"
@@ -291,10 +287,10 @@ $('#search').on('click', 'button', (event) => {
   }
   
   // Hide button
-  if ($(event.target).text() === 'Hide') {
-    if ($(id).hasClass('collapsing') === false) {
-      $(event.target).text('Live');
-      $(id).collapse('hide').empty();
-    }
-  }
+  // if ($(event.target).text() === 'Hide') {
+  //   if ($(id).hasClass('collapsing') === false) {
+  //     $(event.target).text('Click To Start');
+  //     $(id).collapse('hide').empty();
+  //   }
+  // }
 });
