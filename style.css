@@ -1,8 +1,4 @@
-/*
- * Globals
- */
 
-/* Links */
 a,
 a:focus,
 a:hover {
@@ -19,10 +15,6 @@ a:hover {
   border: .05rem solid #fff;
 }
 
-
-/*
- * Base structure
- */
 
 html,
 body {
