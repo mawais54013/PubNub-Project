@@ -53,7 +53,7 @@ streams.forEach((item) => {
       $('#online').append(`
         <div class="col-12">
           <div class="row">
-            <div class="col-8 col-sm-10" id="hidden-div">
+            <div class="col-12 col-sm-12" id="hidden-div">
               
               <button class="btn" value="${json.stream.channel.name}" href="#${json.stream.channel.name}" onclick="getElementById('hidden-div').style.display = 'block'; this.style.display = 'none'">Click To Start</button>
             </div>
@@ -78,7 +78,7 @@ streams.forEach((item) => {
               <div class="col-4 col-sm-2">
                 <img src="${json.logo}">
               </div>
-              <div class="col-8 col-sm-10">
+              <div class="col-12 col-sm-12">
                 <h3><a href="${json.url}" target="_blank">${json.name}</a></h3>
                 <p>Offline</p>
               </div>
@@ -91,10 +91,7 @@ streams.forEach((item) => {
         $('#offline').append(`
           <div class="col-12">
             <div class="row">
-              <div class="col-4 col-sm-2">
-                <img src="img/glitch.png">
-              </div>
-              <div class="col-8 col-sm-10">
+              <div class="col-12 col-sm-12">
                 <h3>${item}</h3>
                 <p>Not a Twitch user...</p>
               </div>
@@ -184,10 +181,12 @@ $('#online').on('click', 'button', (event) => {
     // $(event.target).text('Hide');
 
     // Append iframe into collapse div
+    // height="${((($('#online').width() - 30) * 9) / 16)}"
+    //     width="${($('#online').width() - 30)}"
     $(id).append(`
       <iframe
         src="https://player.twitch.tv/?channel=${name}"
-        height="${((($('#online').width() - 30) * 9) / 16)}"
+        height="${((($('#online').width() - 30) * 9) / 10)}"
         width="${($('#online').width() - 30)}"
         frameborder="0"
         scrolling="no"
