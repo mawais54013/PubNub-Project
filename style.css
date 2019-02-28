@@ -96,3 +96,15 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+#avaButtons
+{
+  overflow-y: scroll;
+  height: 200px;
+}
+
+#setDiv
+{
+  height: 50px;
+  margin: 10px;
+}

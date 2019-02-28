@@ -1,9 +1,9 @@
-const channels = ['freecodecamp', 'Warcraft', 'Asmongold', 'Towelliee', 'Swifty', 'Slootbag', 'Teggu', 'Naguura', 'Sco', 'Rogerbrown', 'devolore', 'TrumpSC', 'nl_Kripp', 'HSdogdog', 'DisguisedToastHS', 'PWNSTARZdotCOM', 'brunofin', 'comster404'];
+const channels = ['Call of Duty','Dashy','ZeRo', 'NairoMK','TehJamJar','DatModz','FIFA_Abe','CalebDMTG','Warcraft', 'Swifty','nl_Kripp', 'TwitchPresents','Doublelift', 'H1ghsky1', 'KabajiOW', 'chocoTaco', 'Kaymind'];
 channels.forEach((data) => {
   $.getJSON(`https://api.twitch.tv/kraken/streams/${data}?client_id=xe5g4cpvq2c7p5kug17vy8wlc0yr1a`, (json) => {
     if(json.stream) {
       $('#avaButtons').append(`
-        <div class="col-12">
+        <div class="col-12" id="setDiv">
           <p class="lead">
             <button onClick="pickedChannel('${json.stream.channel.display_name}')"><a href="desktop.html" class="btn btn-lg btn-secondary" id="channelPicked" value="${json.stream.channel.name}">${json.stream.game}</a></button>
           </p>
@@ -115,28 +115,28 @@ $(document).ajaxStop(() => {
   }
   
   // Append offline message if no streamers are offline
-  if ($('#offline').children().length === 0) {
-    $('#online').append(`
-      <div class="col-12">
-        <p>Everyone is <a href="#online">online</a>! Go watch some streams.</p>
-      </div>
-    `);
-  }
+  // if ($('#offline').children().length === 0) {
+  //   $('#online').append(`
+  //     <div class="col-12">
+  //       <p>Everyone is <a href="#online">online</a>! Go watch some streams.</p>
+  //     </div>
+  //   `);
+  // }
   
-  // Append search suggestions to search div
-  if ($('#search').children().length === 0) {
-    $('#search').append(`
-      <div class="col-12">
-        <p>Try searching for a game. Some suggestions are:</p>
-        <ul>
-          <li>World of Warcraft</li>
-          <li>Hearthstone</li>
-          <li>Starcraft 2</li>
-          <li>Heroes of the Storm</li>
-        </ul>
-      </div>
-    `);
-  }
+  // // Append search suggestions to search div
+  // if ($('#search').children().length === 0) {
+  //   $('#search').append(`
+  //     <div class="col-12">
+  //       <p>Try searching for a game. Some suggestions are:</p>
+  //       <ul>
+  //         <li>World of Warcraft</li>
+  //         <li>Hearthstone</li>
+  //         <li>Starcraft 2</li>
+  //         <li>Heroes of the Storm</li>
+  //       </ul>
+  //     </div>
+  //   `);
+  // }
   
   // Online tab click handler
   $('a[href="#online"]').on('click', (event) => {
