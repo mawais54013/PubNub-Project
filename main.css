@@ -351,6 +351,10 @@ body {
     margin-bottom: 10px;
 }
 
+#header1
+{
+    text-align: center;
+}
 
 @media (max-width:800px) {
     .people-list {

@@ -19,8 +19,10 @@ var generatePerson = function(online) {
 
     var person = {};
 
-    var names = "Vincent Porter Aiden Chavez Mike Thomas Erica Hughes Ginger Johnston Tracy Carpenter Stephen Blum Christian Kelly Monica Ward Todd Green Ian Jennings Dean Henry Peyton Mckinney".split(" ");
+    var names = "Guest".split(" ");
 
+    var nums = "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15".split(" ");
+    
     var avatars = [
         'images/png/001-boy.png',
         'images/png/002-girl.png',
@@ -38,13 +40,10 @@ var generatePerson = function(online) {
         'images/png/014-avatar-7.png',
         'images/png/015-avatar-8.png',
     ];
-
+    
     person.first = names[Math.floor(Math.random() * names.length)];
-    person.last = names[Math.floor(Math.random() * names.length)];
+    person.last = nums[Math.floor(Math.random() * nums.length)];
 
-    // if (!online) {
-    //     person.last = '(Simulated)';
-    // }
 
     person.full = [person.first, person.last].join(" ");
     person.uuid = new Date().getTime();
