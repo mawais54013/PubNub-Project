@@ -22,16 +22,21 @@ var generatePerson = function(online) {
     var names = "Vincent Porter Aiden Chavez Mike Thomas Erica Hughes Ginger Johnston Tracy Carpenter Stephen Blum Christian Kelly Monica Ward Todd Green Ian Jennings Dean Henry Peyton Mckinney".split(" ");
 
     var avatars = [
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_02.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_03.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_04.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_05.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_06.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_07.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_08.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_09.jpg',
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_10.jpg'
+        'images/png/001-boy.png',
+        'images/png/002-girl.png',
+        'images/png/003-man.png',
+        'images/png/004-girl-1.png',
+        'images/png/005-girl-2.png',
+        'images/png/006-girl-3.png',
+        'images/png/007-avatar.png',
+        'images/png/008-avatar-1.png',
+        'images/png/009-avatar-2.png',
+        'images/png/010-avatar-3.png',
+        'images/png/011-avatar-4.png',
+        'images/png/012-avatar-5.png',
+        'images/png/013-avatar-6.png',
+        'images/png/014-avatar-7.png',
+        'images/png/015-avatar-8.png',
     ];
 
     person.first = names[Math.floor(Math.random() * names.length)];

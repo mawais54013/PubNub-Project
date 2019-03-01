@@ -1,4 +1,4 @@
-const channels = ['Call of Duty','Dashy','ZeRo', 'NairoMK','TehJamJar','DatModz','FIFA_Abe','CalebDMTG','Warcraft', 'Swifty','nl_Kripp', 'TwitchPresents','Doublelift', 'H1ghsky1', 'KabajiOW', 'chocoTaco', 'Kaymind'];
+const channels = ['Call of Duty','R9Rai','Dashy','ZeRo', 'NairoMK','TehJamJar','DatModz','FIFA_Abe','CalebDMTG','Warcraft', 'Swifty','nl_Kripp', 'TwitchPresents','Doublelift', 'H1ghsky1', 'KabajiOW', 'chocoTaco', 'Kaymind'];
 channels.forEach((data) => {
   $.getJSON(`https://api.twitch.tv/kraken/streams/${data}?client_id=xe5g4cpvq2c7p5kug17vy8wlc0yr1a`, (json) => {
     if(json.stream) {
