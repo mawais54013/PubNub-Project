@@ -205,7 +205,6 @@ var app = {
 
             $('#people-list ul').append(peopleTemplate(user.state));
         });
-
     },
     renderMessage: function(message) {
 
