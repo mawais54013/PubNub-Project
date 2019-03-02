@@ -5,7 +5,8 @@ channels.forEach((data) => {
       $('#avaButtons').append(`
         <div class="col-12" id="setDiv">
           <p class="lead">
-            <button onClick="pickedChannel('${json.stream.channel.display_name}')"><a href="desktop.html" class="btn btn-lg btn-secondary" id="channelPicked" value="${json.stream.channel.name}">${json.stream.game}</a></button>
+            <button onClick="pickedChannel('${json.stream.channel.display_name}')">
+            <a href="desktop.html" class="btn btn-lg btn-secondary" id="channelPicked" value="${json.stream.channel.name}">${json.stream.game}</a></button>
           </p>
         </div>
       `)

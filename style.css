@@ -20,6 +20,8 @@ html,
 body {
   height: 100%;
   /* background-color: #333; */
+  background-image: url('images/background/Background1.png');
+  background-size: cover;
 }
 
 /* body {
@@ -34,16 +36,29 @@ body {
   max-width: 42em;
 }
 
-
 /*
  * Header
  */
+
+ #header1
+ {
+   margin-top: 20%;
+   color:#18CAE6;
+   font-family: 'Orbitron', sans-serif;
+   font-size: 70px;
+ }
 .masthead {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .masthead-brand {
   margin-bottom: 0;
+}
+
+.cover-heading
+{
+  color: black;
 }
 
 .nav-masthead .nav-link {
@@ -107,4 +122,11 @@ body {
 {
   height: 50px;
   margin: 10px;
+}
+
+.inner
+{
+  margin-left: 35px;
+  margin-right: auto;
+
 }
