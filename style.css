@@ -128,5 +128,58 @@ body {
 {
   margin-left: 35px;
   margin-right: auto;
+}
 
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+	display: block;
+	width: 90%;
+	font-size: 15px;
+	vertical-align: middle;
+	outline: none !important;
+}
+
+
+.btn-design5 {
+	background: none;
+	color: #FFCC00 !important;
+	transition: all 280ms ease-in-out 0s;
+	letter-spacing: 1px;
+}
+.btn-design5::after, .btn-design5::before {
+ border: 1px solid rgba(255, 255, 255, 0);
+ bottom: 0;
+ content: " ";
+ display: block;
+ margin: 15px auto;
+ position: relative;
+ transition: all 280ms ease-in-out 0s;
+ width: 0;
+ box-shadow: 0px 0px 0px #FFCC00;
+}
+.btn-design5:hover {
+	letter-spacing: 4px;
+}
+.btn-design5:hover::after, .btn-design5:hover::before {
+ border: 1px solid #FFE64D;
+ transition: width 350ms ease-in-out 0s;
+ width: 100%;
+ box-shadow: 0 0 19px 1px #DF740C;
+}
+
+#channelPicked
+{
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
