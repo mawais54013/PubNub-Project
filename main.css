@@ -333,11 +333,6 @@ body {
     display: inline-block;
 }
 
-.jumbotron
-{
-    background-color: black;
-}
-
 #check
 {
     background-color: black;
@@ -354,6 +349,9 @@ body {
 #header1
 {
     text-align: center;
+    color:#18CAE6;
+   font-family: 'Orbitron', sans-serif;
+   font-size: 50px;
 }
 
 html,body
@@ -362,6 +360,42 @@ html,body
     background-size: 100% 100%;
 }
 
+#jumboBack
+{
+    background-image: url('images/background/AdobeStock_169306093.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+}
+
+#cont1
+{
+    background-color: transparent;
+}
+
+#row1
+{
+    background-color: black;
+}
+
+#head1
+{
+    color:white;
+}
+
+#holder
+{
+    color: white;
+}
+#footer2
+{
+    background: transparent;
+}
+#footer1
+{
+    color: black;
+    font-weight: 600;
+}
 @media (max-width:800px) {
     .people-list {
         display: none;

@@ -187,7 +187,7 @@ $('#online').on('click', 'button', (event) => {
     $(id).append(`
       <iframe
         src="https://player.twitch.tv/?channel=${name}"
-        height="${((($('#online').width() - 30) * 9) / 10)}"
+        height="${((($('#online').width() - 30)))}"
         width="${($('#online').width() - 30)}"
         frameborder="0"
         scrolling="no"

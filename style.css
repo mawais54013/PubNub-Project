@@ -59,6 +59,7 @@ body {
 .cover-heading
 {
   color: black;
+  margin-top: 10px;
 }
 
 .nav-masthead .nav-link {
