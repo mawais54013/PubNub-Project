@@ -1,6 +1,6 @@
 // array to store channels users can view
 // note that for new games channels will be added every month manually
-const channels = ['Call of Duty','StreamerHouse','EdEMonster','Ninja','BeyondTheSummit', 'PlayHearthstone', 'Giantwaffle', 'Sloot','skill4ltu','MacieJay','LIRIK','FortniteLlamaHunter','TFBlade','TeePee','Poko','XFL_Monkey','Ronnie2k','R9Rai','Dashy','ZeRo', 'NairoMK','TehJamJar','DatModz','FIFA_Abe','CalebDMTG','Warcraft', 'Swifty','nl_Kripp', 'TwitchPresents','Doublelift', 'H1ghsky1', 'KabajiOW', 'chocoTaco', 'Kaymind'];
+const channels = ['Call of Duty','Nick28T','ESL_LOL','StreamerHouse','EdEMonster','Ninja','BeyondTheSummit', 'PlayHearthstone', 'Giantwaffle', 'Sloot','skill4ltu','MacieJay','LIRIK','FortniteLlamaHunter','TFBlade','TeePee','Poko','XFL_Monkey','Ronnie2k','R9Rai','Dashy','ZeRo', 'NairoMK','TehJamJar','DatModz','FIFA_Abe','CalebDMTG','Warcraft', 'Swifty','nl_Kripp', 'TwitchPresents','Doublelift', 'H1ghsky1', 'KabajiOW', 'chocoTaco', 'Kaymind'];
 // for each channel send a request to Twitch api to get json back with information to display
 // below is the format the info will return to
 channels.forEach((data) => {
