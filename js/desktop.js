@@ -1,4 +1,3 @@
-import ChatEngineCore from 'chat-engine';
 // code from pubhub on basic chat 
 // Be sure to replace empty strings with your own App's Publish & Subscribe keys
 // otherwise the demo keys will be used.

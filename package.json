@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "chat-engine": "^0.9.21",
     "chat-engine-markdown": "^0.0.8",
-    "chat-engine-typing-indicator": "^0.0.9",
-    "chat-engine": "^0.9.21"
+    "chat-engine-typing-indicator": "0.0.9"
   },
   "devDependencies": {},
   "scripts": {
