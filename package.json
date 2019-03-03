@@ -1,0 +1,25 @@
+{
+  "name": "pubnub-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chat-engine-markdown": "^0.0.8",
+    "chat-engine-typing-indicator": "^0.0.9",
+    "chat-engine": "^0.9.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mawais54013/PubNub-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mawais54013/PubNub-Project/issues"
+  },
+  "homepage": "https://github.com/mawais54013/PubNub-Project#readme"
+}
