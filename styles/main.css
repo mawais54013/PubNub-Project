@@ -1,3 +1,4 @@
+/* chat styling */
 article,
 aside,
 details,
@@ -312,7 +313,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+/* main header style */
 #header1
 {
     text-align: center;
@@ -320,7 +321,7 @@ body {
    font-family: 'Orbitron', sans-serif;
    font-size: 50px;
 }
-
+/* background images */
 html,body
 {
     background-image: url('../images/background/AdobeStock_169306093.png');
@@ -363,6 +364,7 @@ html,body
     color: black;
     font-weight: 600;
 }
+/* responsive area */
 @media (max-width:800px) {
     .people-list {
         display: none;
