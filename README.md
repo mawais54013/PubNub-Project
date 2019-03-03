@@ -14,7 +14,7 @@ The welcome page has the main heading with a list of games that are available to
 
 ![Homepage](images/gif1.gif)
 
-The main page is where all the actions happens with viewing live stream from Twitch API and using ChatEngine from PubNub SDK. Below is the gif example of myself viewing FIFA 19 with chatting example.
+The main page is where all the action happens with viewing live stream from Twitch API and using ChatEngine from PubNub SDK. Below is the gif example of myself viewing FIFA 19 with chatting example.
 
 ![index](images/gif2.gif)
 
@@ -22,7 +22,7 @@ The main page shows an example of picking a channel to view and starting the liv
 
 ### Prerequisites
 
-This is a web based site, it is responsive depending on browser size but not intended for mobile devices. Your can access the site from any interest browser including [Google Chrome](https://www.google.com/chrome/), [Firefox](https://www.mozilla.org/en-US/firefox/new/), or [Safari](https://www.apple.com/safari/). 
+This is a web based site, it is responsive depending on browser size and templates fits when used via mobile phone but not intended for mobile viewing. Your can access the site from any interest browser including [Google Chrome](https://www.google.com/chrome/), [Firefox](https://www.mozilla.org/en-US/firefox/new/), or [Safari](https://www.apple.com/safari/). 
 
 # Built With
 
@@ -38,7 +38,7 @@ This is a web based site, it is responsive depending on browser size but not int
 # APIs and Libraries
 * [PubNub](https://www.pubnub.com/)
     
-    SDK/CDN for chat engine and presence
+    SDK/CDN for chat engine
 
 * [Google Fonts](https://fonts.google.com/)
 
@@ -66,7 +66,7 @@ This is a web based site, it is responsive depending on browser size but not int
 
 Cross platform chatting with presence indicator and real time updates. Below are two important codes that help make new users while connecting them and creating new chats and organizing them to the chat history.
 
-1) The following code sets up a new chat engine with my keys and creates the new person with a template of name, pic, and time. The connects the user to the current chat; once the user is connect all messages and other users will be connect to indicate their presence to others and chat with everyone in the room. 
+1) The following code sets up a new chat engine with my keys and creates the new person with a template of name, pic, and time. Then connects the user to the current chat; once the user is connected then all messages and other users will be connect to indicate their presence to others and be able chat with everyone in the room. 
 
 ```
 init: function() {
@@ -94,7 +94,7 @@ init: function() {
 }
 ```
 
-2) The next mini set of code is a template for each chat the user types. Each chat will contain the message, current time of the message, and the user that typed the message. Once all those information is contained then it is appended to the chat history. The chat history is sorted by time with the most recent chat shown first and the rest added below the current chat. 
+2) The next mini set of code is a template for each chat the user writes. Each chat will contain the message, current time of the message, and the user that typed the message. Once all those information is contained then it is appended to the chat history. The chat history is sorted by time with the most recent chat shown first and the rest added below the current chat. 
 
 ```
  var context = {
@@ -118,7 +118,9 @@ init: function() {
     });
 ```
 
-The chat is template is set up with Handlebars.js to append to the desktop.html once all information is received from server, PubNub, and Twtich. 
+The chat is template is set up with Handlebars.js to append to the desktop.html once all information is received from the server, PubNub, and Twtich. 
+
+Thank you for viewing my project below are my portfolio and GitHub.
 
 # Author 
 
