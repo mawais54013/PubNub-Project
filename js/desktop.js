@@ -1,3 +1,4 @@
+// code from pubhub on basic chat 
 // Be sure to replace empty strings with your own App's Publish & Subscribe keys
 // otherwise the demo keys will be used.
 let userPubKey = '' || 'pub-c-787b13f5-20e2-494e-a8ff-c1f526d4cb99';
@@ -22,7 +23,7 @@ var generatePerson = function(online) {
     var names = "Guest".split(" ");
 
     var nums = "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15".split(" ");
-    
+    // changed pics and guest titles from original
     var avatars = [
         'images/png/001-boy.png',
         'images/png/002-girl.png',
@@ -40,7 +41,7 @@ var generatePerson = function(online) {
         'images/png/014-avatar-7.png',
         'images/png/015-avatar-8.png',
     ];
-    
+    // set first and last names of each user
     person.first = names[Math.floor(Math.random() * names.length)];
     person.last = nums[Math.floor(Math.random() * nums.length)];
 
@@ -58,7 +59,7 @@ var generatePerson = function(online) {
 
 }
 
-
+// set up new chat for each channel 
 var app = {
     messageToSend: '',
     ChatEngine: false,
@@ -68,73 +69,34 @@ var app = {
     messages: [],
     init: function() {
 
-        // Make sure to import ChatEngine first!
         this.ChatEngine = ChatEngineCore.create({
             publishKey: userPubKey,
             subscribeKey: userSubKey
         }, {
-            // this can make your broswer slooow
+            
             debug: true,
             globalChannel: 'chat-engine-desktop-demo'
         });
-
+        // set up new person and connect them to current chat
         let newPerson = generatePerson(true);
 
         this.ChatEngine.connect(newPerson.uuid, newPerson);
 
         this.cacheDOM();
-
+        // bind messages and users.
         this.ChatEngine.on('$.ready', function(data) {
             app.ready(data);
-            // app.simulateOfflineUsers();
             app.bindMessages();
             app.bindUsers();
         });
 
     },
-    // simulateOfflineUsers: function() {
-
-    //     for (var j = 3; j > 0; j--) {
-    //         var tempPerson = generatePerson(false);
-
-    //         var ceTemp = new this.ChatEngine.User(tempPerson.uuid, tempPerson);
-
-    //         this.users.push(ceTemp)
-    //     }
-
-    //     this.renderUsers();
-
-    // },
     ready: function(data) {
         this.me = data.me;
         this.chat = new this.ChatEngine.Chat(cookieValue);
-        // console.log(cookieValue)
-        // console.log(fromSelect);
-        //// UNCOMMENT code below to enbale the 'markdown-plugin'
-        //// also the `.plugin(markdown);` line chained to `this.chat.search`
-        // const markdown = ChatEngineCore.plugin['chat-engine-markdown']();
-        // this.chat.plugin(markdown);
-
-        // // UNCOMMENT code below to leverage PubNub's MSG History feature
-        // this.chat.on('$.connected', () => {
-        
-        //     // search for 50 old `message` events
-        //     this.chat.search({
-        //         'reverse': true,
-        //         event: 'message',
-        //         limit: 50
-        //     }).on('message', (data) => {
-        //       // when messages are returned, render them like normal messages
-        //       app.renderMessage(data, true);
-        
-        //     })
-        //     //.plugin(markdown);
-        
-        // });
 
         this.bindEvents();
 
-        // add the typing indicator plugin
         let config = { timeout: 2000 };
         const typingIndicator = ChatEngineCore.plugin['chat-engine-typing-indicator'](config);
         this.chat.plugin(typingIndicator);
@@ -160,11 +122,10 @@ var app = {
         });
 
     },
-    // add PubNub - Presence to display users [online|offline] state
+
     bindUsers: function() {
 
-        // UNCOMMENT the code below to leverage PubNub's Presence feature
-        // when a user comes online, render them in the online list
+        // show the presence of each user and render them on the online list
         this.chat.on('$.online.*', function(data) {
             app.users.unshift(data.user);
             app.renderUsers();
@@ -184,6 +145,7 @@ var app = {
         });
 
     },
+    // show when users are typing 
     renderUserTyping: function() {
 
         this.chat.on('$typingIndicator.stopTyping', (payload) => {
@@ -195,6 +157,7 @@ var app = {
             $('#typing').html(payload.sender.uuid + ' is typing...');
         })
     },
+    // render each user to list
     renderUsers: function() {
 
         var peopleTemplate = Handlebars.compile($("#person-template").html());
@@ -206,6 +169,7 @@ var app = {
             $('#people-list ul').append(peopleTemplate(user.state));
         });
     },
+    // creates new messages for each user and displays them 
     renderMessage: function(message) {
 
         var meTemp = Handlebars.compile($("#message-template").html());
@@ -243,7 +207,7 @@ var app = {
         this.scrollToBottom();
 
     },
-
+    // message send function to display in text area
     sendMessage: function() {
 
         this.messageToSend = this.$textarea.val()
@@ -265,9 +229,11 @@ var app = {
             this.chat.typingIndicator.startTyping();
         }
     },
+    // enable scroll feature for chat history
     scrollToBottom: function() {
         this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight);
     },
+    // the next two functions are to get current time to use to render time of each message
     parseTime: function(time) {
         return time.toLocaleDateString() + ", " + time.toLocaleTimeString().
         replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");

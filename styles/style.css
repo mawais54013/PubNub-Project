@@ -30,11 +30,11 @@ body {
   margin-top: 10px;
 }
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   .nav-masthead {
     float: right;
   }
-}
+} */
 
 .cover {
   padding: 0 1.5rem;
@@ -118,4 +118,11 @@ body {
     cursor:pointer;
     overflow: hidden;
     outline:none;
+}
+
+@media (max-width: 680px) {
+  .cover-heading
+  {
+    color:white;
+  }
 }
