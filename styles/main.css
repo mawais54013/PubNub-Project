@@ -208,21 +208,21 @@ body {
     height: 0;
     width: 0;
     pointer-events: none;
-    border-bottom-color: #86BB71;
+    border-bottom-color: black;
     border-width: 10px;
     margin-left: -10px;
 }
 
 .chat .chat-history .my-message {
-    background: #86BB71;
+    background: black;
 }
 
 .chat .chat-history .other-message {
-    background: #94C2ED;
+    background: rgb(23, 111, 192);
 }
 
 .chat .chat-history .other-message:after {
-    border-bottom-color: #94C2ED;
+    border-bottom-color: rgb(23, 111, 192);
     left: 93%;
 }
 
