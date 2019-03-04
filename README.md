@@ -66,7 +66,7 @@ This is a web based site, it is responsive depending on browser size and templat
 
 ![ChatEngine](images/img3.png)
 
-This project is set to demonstrate PubNub chat engine by connecting multiple users and having each of them communicate about a live stream. A Cross platform chatting system with presence indicator and real time message updates. Below are two important codes that help make new users while connecting them and creating new chats and organizing them to the chat history.
+This project is set to demonstrate PubNub chat engine by connecting multiple users and having each of them communicate about a live stream. The benefit for choosing PubNub is to make the chat content unique with features such as user presence, handle multiple users, and have real time updates. A Cross platform chatting system with presence indicator and real time message updates. Below are two important codes that help make new users while connecting them and creating new chats and organizing them to the chat history.
 
 1) The following code sets up a new chat engine with my keys and creates the new person with a template of name, pic, and time. Then connects the user to the current chat; once the user is connected then all messages and other users will be connect to indicate their presence to others and be able chat with everyone in the room. 
 
