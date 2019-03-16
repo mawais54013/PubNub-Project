@@ -1,8 +1,9 @@
 // code from pubhub on basic chat 
 // Be sure to replace empty strings with your own App's Publish & Subscribe keys
 // otherwise the demo keys will be used.
-let userPubKey = '' || 'pub-c-787b13f5-20e2-494e-a8ff-c1f526d4cb99';
-let userSubKey = '' || 'sub-c-a278f356-36f6-11e9-b682-2a55d2175413';
+
+let userPubKey = '' || 'pub-c-bd9f0073-cfc6-45e4-8b74-6d854d72154e';
+let userSubKey = '' || 'sub-c-fc1b3ad4-482d-11e9-aa90-a6f7447e8d57';
 
 // Make a jQuery sort for the chat log based on message timetoken (tt)
 jQuery.fn.sortDomElements = (function() {
