@@ -2,8 +2,8 @@
 // Be sure to replace empty strings with your own App's Publish & Subscribe keys
 // otherwise the demo keys will be used.
 
-let userPubKey = '' || 'pub-c-e0be98c4-caff-4895-bce3-bba738779a4a';
-let userSubKey = '' || 'sub-c-6a19fbb6-7145-11e9-b514-6a4d3cd75da8';
+let userPubKey = '' || 'pub-c-1ae5e6d8-cef1-4d9f-9036-72cb2583e03a';
+let userSubKey = '' || 'sub-c-20d15c3e-7fdb-11e9-864a-425487ca1cfc';
 
 // Make a jQuery sort for the chat log based on message timetoken (tt)
 jQuery.fn.sortDomElements = (function() {
